@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#d7dae3", "on-primary-fixed": "#001b3e", "error": "#ba1a1a", "secondary-fixed-dim": "#aec7f7", "on-tertiary-fixed-variant": "#763400", "outline-variant": "#c1c6d5", "on-error-container": "#93000a", "on-primary-fixed-variant": "#00458d", "on-secondary-fixed-variant": "#2d476f", "on-secondary-container": "#3f5881", "on-tertiary-fixed": "#321200", "primary-container": "#1275e2", "surface-variant": "#e0e2eb", "surface-container-low": "#f1f3fc", "surface-container-high": "#e6e8f1", "tertiary": "#9a4600", "primary": "#005cb8", "on-primary-container": "#000512", "surface-tint": "#005db8", "tertiary-fixed": "#ffdbc9", "surface": "#f9f9ff", "on-surface": "#181c22", "primary-fixed-dim": "#aac7ff", "surface-container": "#ebedf7", "on-primary": "#ffffff", "inverse-surface": "#2d3037", "on-tertiary": "#ffffff", "surface-container-highest": "#e0e2eb", "background": "#f9f9ff", "on-secondary-fixed": "#001b3d", "surface-bright": "#f9f9ff", "secondary": "#465f88", "secondary-fixed": "#d6e3ff", "error-container": "#ffdad6", "on-background": "#181c22", "tertiary-container": "#c05900", "inverse-primary": "#aac7ff", "on-tertiary-container": "#0d0300", "surface-container-lowest": "#ffffff", "primary-fixed": "#d6e3ff", "on-secondary": "#ffffff", "outline": "#717785", "on-error": "#ffffff", "secondary-container": "#b6d0ff", "on-surface-variant": "#414753", "tertiary-fixed-dim": "#ffb68c", "inverse-on-surface": "#eef0fa" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-2xs": "0.25rem", "space-xl": "1.5rem", "space-lg": "1.25rem", "pwa-fab-size": "3.5rem", "space-sm": "0.75rem", "space-2xl": "2rem", "pwa-nav-height": "4.5rem", "space-3xl": "2.5rem", "space-md": "1rem", "screen-edge-padding": "1rem", "space-xs": "0.5rem" }, fontFamily: { "headline": ["Inter"], "display": ["Inter"], "body": ["Inter"], "label": ["Inter"], "currency-lg": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"], "currency-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "currency-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "display-lg": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "currency-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body text-body-md min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-surface-variant"><div class="h-20 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Slipstats App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2CbNIZCTPxeOzUOvL0vnIqn3i2BOMVtt7WmrzmdejLNjkYwzomsd7ou8Xi-pK__pFa0WxEtZRbKBsjud3gnqxZK7rBkuEiYKPEDE00ELsf3nOVmJ2nCwQujx0fJ3kN1b8y9PqmQ1xAL_-PwfmeLvxIlgST4QooS5t2mqEnxHv7lEWyc7MMLc0kSYdT93bFJRe8MiIH0bbUYgvu4D9bJV2o3jmJfDezpNP8Z62eAyMgu03wn7RSDOtw"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight font-semibold">Slipstats</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Expenses Dashboard</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-high px-space-xs py-1 rounded-xl text-on-surface-variant border border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary mr-1">family_restroom</span><select aria-label="Active child filter" class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none pr-1 appearance-none"><option>All Kids</option><option>Liam</option><option>Maya</option></select><span class="material-symbols-outlined text-[14px] text-outline pointer-events-none">expand_more</span></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center text-on-surface-variant rounded-xl active:bg-surface-container" data-path="notifications" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></a></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center rounded-xl active:opacity-90" data-path="children-splits" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqOn-vNlRadjRqikI_Je5LF_6H824KR1TzFC9DS2QPjxUIUhqxP2kBe_N_8zsg23A4t106QqPYnAJmhL0zdFiw0CAXPN2XWSanqT3BDFyqFB6LzIDmdm56KANMqjMvEjy0nK-QKgUa6F6zBR3_7C9YPD0oWYHNCPNcqG2WJZNHZe1Drvl41lA2gA1z4w2A9pa8-oar_dTA2ZfHs-GG0Uh_3yE2zQuu8lnDVYl4YCSrPGLTomsYTS0DJA"/></a></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px)+1rem)] px-space-md bg-surface"><div class="flex flex-col w-full gap-space-md">
+<!-- Reassuring Greeting & Status Indicator -->
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Court-Grade Audit Trail Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed px-2.5 py-0.5 rounded-xl border border-primary-fixed-dim/50">October 2024</span>
+</div>
+<!-- Hero Summary Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg border border-outline-variant/30 shadow-sm">
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-secondary-container/30 pointer-events-none blur-2xl"></div>
+<div class="absolute right-4 bottom-3 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[88px] text-primary">verified_user</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Shared Ledger Balance</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5 font-bold">October Child Expenses</h2>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+          Pending Reimbursement
+        </span>
+</div>
+<!-- Financial Split Breakdown Grid -->
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm">
+<div class="flex items-center gap-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[15px] text-primary">receipt_long</span>
+<span class="font-label-sm text-label-sm font-medium">Total Tracked</span>
+</div>
+<div class="font-currency-lg text-currency-lg text-on-surface font-bold tracking-tight">
+            R2,845<span class="text-on-surface-variant text-base font-normal">.50</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-0.5 block">14 verified slips</span>
+</div>
+<div class="p-space-sm rounded-xl bg-secondary-fixed/50 border border-secondary-fixed-dim/60">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant mb-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">balance</span>
+<span class="font-label-sm text-label-sm font-semibold">Co-Parent Owes (50%)</span>
+</div>
+<div class="font-currency-lg text-currency-lg text-primary font-bold tracking-tight">
+            R1,422<span class="text-secondary text-base font-normal">.75</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant font-medium mt-0.5 block">Legally apportioned</span>
+</div>
+</div>
+<!-- Quick Action / Settlement Insight Bar -->
+<div class="flex items-center justify-between pt-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Receipt photos timestamped &amp; indexed</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5 active:opacity-75" type="button">
+          Legal Summary
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Children Horizontal Split Cards -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-2xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Child Spend Allocation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Beneficiaries</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Liam Card -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-space-xs mb-2">
+<div class="w-9 h-9 rounded-xl overflow-hidden bg-primary-fixed flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait photo of a cheerful 7 year old boy named Liam wearing a soft emerald crewneck sweater outdoors in gentle sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV4Z1uMBbUw8xJc-Gnuy9IP1DrvyQRRLkN43RMhpnp6M7iIpg6UvYMzc-0sQ6albpPdQYsGpGrKJydKbd1bcv_eOmyhWc1221BvrlOAMhhxWyuYyF51Gndbnmzmv2Xu8V-h8N4kkKLse95GST3V0hK_yBHbS9NubuB9XdnIWtx1ncd_yB6oaIXXQ5vufSxekKEPwY26Agh50vJuyO5fdOHQ0KhtJAGKossL-pgfobaUTxJ-ia7hOhNxw"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface leading-tight truncate font-semibold">Liam</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Age 7 • Grade 2</span>
+</div>
+</div>
+<div class="font-currency-md text-currency-md text-primary font-bold tracking-tight">
+          R1,620.00
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+          School tuition, soccer gear, pediatric ADHD prescription
+        </p>
+<div class="mt-2.5 pt-2 flex items-center justify-between bg-surface-container-lowest border border-outline-variant/30 px-2 py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Co-parent share</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">R810.00</span>
+</div>
+</div>
+<!-- Maya Card -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-space-xs mb-2">
+<div class="w-9 h-9 rounded-xl overflow-hidden bg-tertiary-fixed flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sweet soft focus portrait of an energetic 3 year old toddler girl named Maya with curly hair wearing a blush pink cardigan smiling gently." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM7gJ34RP-Ddp9XI1q8kj8MHT-uqz0iWZm54NSLj5uVjxyYIAdlBhck6G5KBtD1umxIQ-UNJ5EWaEEHB2Xbvf1ChbwGr29qEYerrTNrsYA7fEaPQ5x-BGMRG440G4iiVPGPpVB_7p-uXna2ep-kLkSOvR9mWxnqCKhT8RiZ03hNkVam28vbFPJFxjqb8fWH_ETdubdLiwAu55s1zb_VRhkYRUGORa_OusWaxcfbSNceLwLhcFK8KJnKw"/>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface leading-tight truncate font-semibold">Maya</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Age 3 • Nursery</span>
+</div>
+</div>
+<div class="font-currency-md text-currency-md text-primary font-bold tracking-tight">
+          R1,225.50
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+          Toddler formula, size 4 diapers, nursery fees, winter boots
+        </p>
+<div class="mt-2.5 pt-2 flex items-center justify-between bg-surface-container-lowest border border-outline-variant/30 px-2 py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Co-parent share</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">R612.75</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Category Share Visualizer (Progress Segment Bar) -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">pie_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Category Proportions</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">100% Accounted</span>
+</div>
+<!-- Multi-segment progress bar -->
+<div class="w-full h-3 rounded-lg overflow-hidden flex bg-surface-container-highest mt-1">
+<div class="h-full bg-primary" style="width: 42%;" title="Education 42%"></div>
+<div class="h-full bg-secondary" style="width: 26%;" title="Medical &amp; Health 26%"></div>
+<div class="h-full bg-tertiary-container" style="width: 18%;" title="Hygiene &amp; Care 18%"></div>
+<div class="h-full bg-primary-fixed-dim" style="width: 9%;" title="Travel / Transit 9%"></div>
+<div class="h-full bg-outline-variant" style="width: 5%;" title="Other 5%"></div>
+</div>
+<!-- Legend Items -->
+<div class="grid grid-cols-3 gap-y-1.5 gap-x-2 pt-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Tuition (42%)</span>
+</div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Medical (26%)</span>
+</div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Hygiene (18%)</span>
+</div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-fixed-dim flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Transit (9%)</span>
+</div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-sm bg-outline-variant flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Other (5%)</span>
+</div>
+<div class="flex items-center justify-end">
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">View details</button>
+</div>
+</div>
+</div>
+<!-- Filter Carousel -->
+<div class="flex flex-col gap-space-xs -mx-space-md px-space-md overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-1.5 flex-nowrap min-w-max">
+<button class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">check</span>
+        All Items
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        School &amp; Tuition
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        Medical &amp; RX
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        Hygiene (Diapers)
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        Food (Formula)
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        Travel &amp; Fuel
+      </button>
+<button class="px-3.5 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-variant transition-colors border border-outline-variant/30" type="button">
+        Housing Ext.
+      </button>
+</div>
+</div>
+<!-- Court-Ready Exhibit Quick Banner -->
+<div class="p-space-sm rounded-xl bg-surface-container border border-outline-variant/40 flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate font-semibold">Court-Ready PDF Bundle</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Certified hashes &amp; receipts compiled</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold flex items-center gap-1 flex-shrink-0 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[15px]">download</span>
+      Export
+    </button>
+</div>
+<!-- Recent Expenses List Section -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-2xs">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Expenses</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-0.5 rounded-xl font-bold">4 Verified</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold" type="button">View All (14)</button>
+</div>
+<!-- Expense Card 1: Clicks Pharmacy -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-2">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]">medication</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate font-semibold">Clicks Pharmacy</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Medical • 2 hrs ago</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-currency-md text-currency-md text-on-surface font-bold">R64.50</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Liam owes: R32.25</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 px-2.5 py-1.5 rounded-lg">
+        Pediatric Asthma Inhaler &amp; Multi-vitamins (Allocated: Liam 100%)
+      </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-lg font-medium">
+<span class="material-symbols-outlined text-[13px]">document_scanner</span>
+            Till Slip Scanned
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: #SL-8841</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed bg-tertiary-fixed px-2 py-0.5 rounded-xl font-semibold">
+          Pending Co-Parent
+        </span>
+</div>
+</div>
+<!-- Expense Card 2: Pick n Pay / Supermarket -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-2">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]">baby_changing_station</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate font-semibold">Pick n Pay Supermarket</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hygiene &amp; Nutrition • Yesterday</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-currency-md text-currency-md text-on-surface font-bold">R118.20</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Maya owes: R59.10</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 px-2.5 py-1.5 rounded-lg">
+        Diapers Size 4 + Formula stage 2 (Maya 100% • Groceries personal itemized &amp; excluded)
+      </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-primary bg-primary px-2 py-0.5 rounded-lg font-semibold">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+            AI Verified
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audit Tag #742</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed bg-tertiary-fixed px-2 py-0.5 rounded-xl font-semibold">
+          Pending Co-Parent
+        </span>
+</div>
+</div>
+<!-- Expense Card 3: Oakridge Montessori -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-2">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]">school</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate font-semibold">Oakridge Montessori</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Education • Oct 12, 2024</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-currency-md text-currency-md text-on-surface font-bold">R950.00</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Split: R475.00</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 px-2.5 py-1.5 rounded-lg">
+        Term 4 Tuition &amp; Aftercare (Allocated: Liam &amp; Maya 50/50 joint care)
+      </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-lg font-medium">
+<span class="material-symbols-outlined text-[13px]">description</span>
+            Official Invoice Doc
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct EFT</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold bg-secondary-fixed px-2 py-0.5 rounded-xl">
+          Reimbursed
+        </span>
+</div>
+</div>
+<!-- Expense Card 4: Shell Fuel Station -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-2">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]">local_gas_station</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-md text-title-md text-on-surface truncate font-semibold">Shell Fuel Station</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Travel • Oct 10, 2024</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<div class="font-currency-md text-currency-md text-on-surface font-bold">R75.00</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Child Share: R45.00</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 px-2.5 py-1.5 rounded-lg">
+        School commute &amp; Extramural transit (Statutory child portion set at 60%)
+      </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-lg font-medium">
+<span class="material-symbols-outlined text-[13px]">distance</span>
+            Mileage Logged
+          </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-xl font-semibold">
+          Draft Review
+        </span>
+</div>
+</div>
+</div>
+<!-- Reassuring Security & Legal Guarantee Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="min-w-0">
+<h5 class="font-title-md text-title-md text-on-surface font-semibold">Tamper-Proof Ledger</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Receipt images are cryptographically stored. Any edits preserve legal audit timestamps admissible in family arbitration.
+      </p>
+</div>
+</div>
+<!-- Extended Floating Action Button (M3 Ext FAB) -->
+<div class="fixed right-4 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px)+1rem)] z-40">
+<button class="h-14 px-5 rounded-xl bg-primary-container text-on-primary shadow-lg flex items-center gap-2.5 active:scale-95 transition-all hover:bg-primary" type="button">
+<span class="material-symbols-outlined text-[24px]">document_scanner</span>
+<span class="font-label-lg text-label-lg font-bold tracking-tight">+ Scan Till Slip</span>
+</button>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl border-t border-surface-variant shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="h-pwa-nav-height px-space-sm flex justify-around items-center"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 transition-colors active:scale-95 text-primary font-bold" data-path="expenses-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Expenses</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="scan-slip" href="#"><div class="w-10 h-7 flex items-center justify-center rounded-xl bg-primary-fixed text-primary"><span class="material-symbols-outlined text-[20px]">document_scanner</span></div><span class="font-label-sm text-label-sm font-semibold text-primary">Scan Slip</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="court-reports" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label-sm text-label-sm">Reports</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="children-splits" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-label-sm">Children</span></a></div></nav></body></html>

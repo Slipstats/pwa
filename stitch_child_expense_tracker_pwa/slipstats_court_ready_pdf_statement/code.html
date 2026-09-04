@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#d7dae3",
+          "on-primary-fixed": "#001b3e",
+          "error": "#ba1a1a",
+          "secondary-fixed-dim": "#aec7f7",
+          "on-tertiary-fixed-variant": "#763400",
+          "outline-variant": "#c1c6d5",
+          "on-error-container": "#93000a",
+          "on-primary-fixed-variant": "#00458d",
+          "on-secondary-fixed-variant": "#2d476f",
+          "on-secondary-container": "#3f5881",
+          "on-tertiary-fixed": "#321200",
+          "primary-container": "#1275e2",
+          "surface-variant": "#e0e2eb",
+          "surface-container-low": "#f1f3fc",
+          "surface-container-high": "#e6e8f1",
+          "tertiary": "#9a4600",
+          "primary": "#005cb8",
+          "on-primary-container": "#ffffff",
+          "surface-tint": "#005db8",
+          "tertiary-fixed": "#ffdbc9",
+          "surface": "#f9f9ff",
+          "on-surface": "#181c22",
+          "primary-fixed-dim": "#aac7ff",
+          "surface-container": "#ebedf7",
+          "on-primary": "#ffffff",
+          "inverse-surface": "#2d3037",
+          "on-tertiary": "#ffffff",
+          "surface-container-highest": "#e0e2eb",
+          "background": "#f9f9ff",
+          "on-secondary-fixed": "#001b3d",
+          "surface-bright": "#f9f9ff",
+          "secondary": "#465f88",
+          "secondary-fixed": "#d6e3ff",
+          "error-container": "#ffdad6",
+          "on-background": "#181c22",
+          "tertiary-container": "#c05900",
+          "inverse-primary": "#aac7ff",
+          "on-tertiary-container": "#0d0300",
+          "surface-container-lowest": "#ffffff",
+          "primary-fixed": "#d6e3ff",
+          "on-secondary": "#ffffff",
+          "outline": "#717785",
+          "on-error": "#ffffff",
+          "secondary-container": "#b6d0ff",
+          "on-surface-variant": "#414753",
+          "tertiary-fixed-dim": "#ffb68c",
+          "inverse-on-surface": "#eef0fa"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-2xs": "0.25rem",
+          "space-xl": "1.5rem",
+          "space-lg": "1.25rem",
+          "pwa-fab-size": "3.5rem",
+          "space-sm": "0.75rem",
+          "space-2xl": "2rem",
+          "pwa-nav-height": "4.5rem",
+          "space-3xl": "2.5rem",
+          "space-md": "1rem",
+          "screen-edge-padding": "1rem",
+          "space-xs": "0.5rem"
+        },
+        "fontFamily": {
+          "headline": ["Inter", "sans-serif"],
+          "display": ["Inter", "sans-serif"],
+          "body": ["Inter", "sans-serif"],
+          "label": ["Inter", "sans-serif"]
+        }
+      }
+    }
+  };
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body text-[14px] leading-5 min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_1px_6px_rgba(0,0,0,0.03)]"><div class="h-20 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Slipstats App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2CbNIZCTPxeOzUOvL0vnIqn3i2BOMVtt7WmrzmdejLNjkYwzomsd7ou8Xi-pK__pFa0WxEtZRbKBsjud3gnqxZK7rBkuEiYKPEDE00ELsf3nOVmJ2nCwQujx0fJ3kN1b8y9PqmQ1xAL_-PwfmeLvxIlgST4QooS5t2mqEnxHv7lEWyc7MMLc0kSYdT93bFJRe8MiIH0bbUYgvu4D9bJV2o3jmJfDezpNP8Z62eAyMgu03wn7RSDOtw"/><div class="flex flex-col"><span class="text-[16px] font-bold text-primary tracking-tight">Slipstats</span><span class="text-[11px] text-on-surface-variant font-medium">Court Reports</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-high px-space-xs py-1 rounded-full text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary mr-1">family_restroom</span><select aria-label="Active child filter" class="bg-transparent text-[12px] text-on-surface font-semibold focus:outline-none pr-1 appearance-none cursor-pointer"><option>All Kids</option><option>Liam</option><option>Maya</option></select><span class="material-symbols-outlined text-[14px] text-outline pointer-events-none">expand_more</span></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center text-on-surface-variant rounded-full hover:bg-surface-container active:bg-surface-container" data-path="notifications" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></a></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center rounded-full active:opacity-90" data-path="children-splits" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqOn-vNlRadjRqikI_Je5LF_6H824KR1TzFC9DS2QPjxUIUhqxP2kBe_N_8zsg23A4t106QqPYnAJmhL0zdFiw0CAXPN2XWSanqT3BDFyqFB6LzIDmdm56KANMqjMvEjy0nK-QKgUa6F6zBR3_7C9YPD0oWYHNCPNcqG2WJZNHZe1Drvl41lA2gA1z4w2A9pa8-oar_dTA2ZfHs-GG0Uh_3yE2zQuu8lnDVYl4YCSrPGLTomsYTS0DJA"/></a></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px)+1rem)] px-space-md bg-surface"><div class="flex flex-col w-full gap-space-md">
+<!-- Interactive Period Selector & Title Group -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h1 class="text-[22px] font-bold text-primary tracking-tight">Expense Statement &amp; PDF Export</h1>
+<span class="inline-flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded-full text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+        Audit-Ready
+      </span>
+</div>
+<!-- Period Selector Pill Dropdown Trigger -->
+<div class="relative w-full">
+<button class="w-full flex items-center justify-between bg-surface-container-low px-space-md py-2.5 rounded-xl border border-surface-container-highest/70 text-left transition-transform active:scale-[0.99]" id="period-picker-btn" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Statement Billing Period</span>
+<span class="text-[15px] font-semibold text-on-surface" id="current-period-text">Oct 1, 2024 – Oct 31, 2024</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Certified Statement Legal Document Card -->
+<section class="relative bg-surface-container-lowest rounded-xl border border-surface-container-high p-space-md shadow-sm flex flex-col gap-space-md overflow-hidden">
+<!-- Subtle Legal Watermark Backdrop -->
+<div class="absolute -right-12 -top-12 pointer-events-none opacity-5 text-primary select-none flex flex-col items-center">
+<span class="material-symbols-outlined text-[240px] leading-none">gavel</span>
+</div>
+<!-- Official Header Banner -->
+<div class="bg-primary-container text-on-primary p-space-sm rounded-xl flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">verified_user</span>
+<span class="text-[11px] font-bold tracking-wider text-primary-fixed uppercase">SLIPSTATS CERTIFIED STATEMENT</span>
+</div>
+<span class="text-[11px] font-medium text-primary-fixed-dim">Family Court Accredited</span>
+</div>
+<p class="text-[12px] leading-relaxed text-surface-container-lowest/90 font-normal">
+        Prepared pursuant to Uniform Civil &amp; Domestic Support Guidelines. Certified immutable evidence chain.
+      </p>
+</div>
+<!-- Case Metadata Dossier Grid -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-highest/60 p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<span class="text-[11px] text-on-surface-variant font-medium">Matter / Settlement Ref:</span>
+<span class="text-[12px] font-bold text-primary tracking-tight bg-surface-container-lowest px-2 py-0.5 rounded-lg border border-surface-container-high shadow-xs">
+          #FL-2023-8841-DIV
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-lowest rounded-lg border border-surface-container p-2 flex flex-col">
+<span class="text-[11px] text-on-surface-variant font-medium">Primary Custodian</span>
+<span class="text-[14px] font-bold text-on-surface truncate">Sarah Jenkins</span>
+<span class="text-[11px] text-secondary font-medium">Mother (Claimant)</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg border border-surface-container p-2 flex flex-col">
+<span class="text-[11px] text-on-surface-variant font-medium">Co-Parent Obligor</span>
+<span class="text-[14px] font-bold text-on-surface truncate">David Jenkins</span>
+<span class="text-[11px] text-outline font-medium">Father (Respondent)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg border border-surface-container p-2 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">child_care</span>
+<div class="flex flex-col">
+<span class="text-[11px] text-on-surface-variant font-medium">Beneficiary Children</span>
+<div class="flex flex-col gap-0.5 mt-0.5">
+<span class="text-[12px] text-on-surface">
+              • <strong>Liam Jenkins</strong> (DOB: Dec 04, 2017 • Age 6)
+            </span>
+<span class="text-[12px] text-on-surface">
+              • <strong>Maya Jenkins</strong> (DOB: Sep 28, 2021 • Age 3)
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- High-Impact Financial Totals Box -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low border border-surface-container-high rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">receipt</span>
+<span class="text-[11px] font-semibold uppercase tracking-wide">Gross Child Outlay</span>
+</div>
+<div class="mt-2">
+<span class="text-[24px] font-bold text-on-surface tracking-tight leading-none block">R2,845.50</span>
+<span class="block text-[11px] text-on-surface-variant mt-1">100% verified spend</span>
+</div>
+</div>
+<div class="bg-secondary-fixed border border-secondary-fixed-dim rounded-xl p-space-sm flex flex-col justify-between shadow-xs">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">handshake</span>
+<span class="text-[11px] font-bold uppercase tracking-wide">Co-Parent Due (50%)</span>
+</div>
+<div class="mt-2">
+<span class="text-[24px] font-bold text-on-secondary-fixed tracking-tight leading-none block">R1,422.75</span>
+<span class="block text-[11px] text-on-secondary-fixed-variant font-medium mt-1">Decree obligation</span>
+</div>
+</div>
+</div>
+<!-- Category Breakdown Ledger -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-[15px] font-bold text-on-surface">Itemized Statutory Ledger</span>
+<span class="text-[11px] text-on-surface-variant font-medium">5 Categories</span>
+</div>
+<!-- Itemized Ledger List -->
+<div class="flex flex-col gap-2">
+<!-- Medical -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-high p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-semibold text-on-surface">Medical &amp; Therapy</span>
+<span class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                2 receipts attached
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[16px] font-bold text-on-surface block">R340.50</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Share: R170.25</span>
+</div>
+</div>
+<!-- School & Education -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-high p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-semibold text-on-surface">School &amp; Education</span>
+<span class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                1 invoice attached
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[16px] font-bold text-on-surface block">R1,250.00</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Share: R625.00</span>
+</div>
+</div>
+<!-- Hygiene & Care -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-high p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">baby_changing_station</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-semibold text-on-surface">Hygiene &amp; Diapering</span>
+<span class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                4 till slips attached
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[16px] font-bold text-on-surface block">R215.00</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Share: R107.50</span>
+</div>
+</div>
+<!-- Food & Nutrition -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-high p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">nutrition</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-semibold text-on-surface">Food &amp; Infant Nutrition</span>
+<span class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                5 till slips attached
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[16px] font-bold text-on-surface block">R380.00</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Share: R190.00</span>
+</div>
+</div>
+<!-- Extramural / Travel -->
+<div class="bg-surface-container-low rounded-xl border border-surface-container-high p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">sports_soccer</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-semibold text-on-surface">Extramural &amp; Commute</span>
+<span class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                3 receipts attached
+              </span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[16px] font-bold text-on-surface block">R660.00</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Share: R330.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence Verification Banner -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-xl p-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[14px] font-bold text-on-surface leading-snug">Forensic Evidence Summary</span>
+<span class="text-[12px] text-on-surface-variant leading-normal">
+          15 Receipts &amp; Till Slips verified with AI timestamp and store vouchers. Cryptographically signed hash #SHA256-8F2B.
+        </span>
+</div>
+</div>
+<!-- Legal Attestation Statement -->
+<div class="bg-surface-container-high/60 rounded-xl p-2.5 text-center border border-surface-container-highest">
+<p class="text-[11px] text-on-surface-variant leading-relaxed italic">
+        “I hereby declare under penalty of perjury that the aforementioned expenditures were incurred solely on behalf of the named minor children in accordance with existing court decrees.”
+      </p>
+</div>
+</section>
+<!-- Export Visual Gallery / Proof Snapshot Preview -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-[15px] font-bold text-on-surface">Included Till Slips Preview</span>
+<span class="text-[11px] text-primary font-semibold">All 15 Attached</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="relative rounded-xl overflow-hidden shadow-xs border border-surface-container-high bg-surface-container aspect-square">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a supermarket receipt with itemized purchases of formula and baby supplies, neatly organized on a wooden table in soft daylight with teal office stationery nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA__P3wkOWl-Hge5leuP8042zwkLlvAK-uhl2leL914Ln5JTRuBLlRP6LhyA_U3cK-o-wABcYE6vntOZW1qxjs23_ZiEcLys_pwEhNpJVEUlZRRMW4jV3zcbpKsH-EuwUqEWvqlXcjA57SfAA2PMMNIMbVPEU5j2oLNVqmorlTvoGn0RT1esFcSfOuGiAewy9zIaU4MMjRQSog1blel4Zm4W--wx-avBc7WUTVbtnbHzNV9qNxbSWnvMw"/>
+<div class="absolute bottom-0 inset-x-0 bg-inverse-surface/80 backdrop-blur-xs text-inverse-on-surface px-1.5 py-0.5 text-center text-[11px] font-medium">
+          Formula R48.20
+        </div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-xs border border-surface-container-high bg-surface-container aspect-square">
+<img class="w-full h-full object-cover" data-alt="Clear photographic scan of a pediatric clinic medical invoice showing prescription co-pays and doctor visit stamps, cleanly lit with modern domestic paperwork styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbZlqE42PYppW6orXT1I_gZB8TC4W7MAgABm4BxNBjFQCwSfM8J26CvJ2O4v5QrOtN0mrSqgLmBy1jRT-J_QXjowKmae0dw3IKUMMyBUYlhJMENAONvN7jSUEbphq3ir9oJSwh9l93bwWhtTdzxVN7gMjNC2cLtSUhJhLeIjZB_Y5erDstNrb_ltTE8Ue_eM7cTycZVWLJCHeTCsYY7rQua12NM48f3vbH6flsHygmITIv2LccJmXbBw"/>
+<div class="absolute bottom-0 inset-x-0 bg-inverse-surface/80 backdrop-blur-xs text-inverse-on-surface px-1.5 py-0.5 text-center text-[11px] font-medium">
+          Pediatric R120.00
+        </div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-xs border border-surface-container-high bg-surface-container aspect-square flex flex-col items-center justify-center text-center p-2">
+<img class="w-full h-full object-cover" data-alt="Official primary school stationery invoice with term tuition and athletic uniform registration receipt, sharp clear focus with warm gentle ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjoienS8Brb7Eep-HTZcdPrl0xF6KcVrRTUpUKCgB1xBHPtcfhi4vGQ8SuyIzI7vf8R5KfSrksRD1p2rRrNCSQh9M6lNlhjbup114y7eZLaM0j8QcBMgTOgMnnifDmHE1g5yGFEkLJQIlPvRdnfYfWeVUmZHvYbr8qJPgSBAEZKQT6WMoKaRsgzLzUJUn9Ssjnn3qS_n46cgl_glhi7-zBHB02i7NWasHfozoSsDK00uTMaUZFsDumnQ"/>
+<div class="absolute bottom-0 inset-x-0 bg-primary/90 backdrop-blur-xs text-on-primary px-1.5 py-0.5 text-center text-[11px] font-bold">
+          +13 More
+        </div>
+</div>
+</div>
+</section>
+<!-- Interactive Legal Action Palette -->
+<section class="flex flex-col gap-space-xs pt-1 pb-2">
+<!-- Primary CTA: Official PDF Download -->
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-bold text-[14px] flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container transition-transform active:scale-[0.98]" id="btn-download-pdf" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Download Official PDF Statement</span>
+</button>
+<!-- Secondary CTA: Email Mediator / Attorney -->
+<button class="w-full h-11 bg-secondary-fixed text-on-secondary-fixed rounded-xl font-semibold text-[13px] border border-secondary-fixed-dim flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" id="btn-email-lawyer" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+<span>Email to Attorney / Mediator</span>
+</button>
+<!-- Tertiary Action: Generate View-Only Co-Parent Portal Link -->
+<div class="flex items-center justify-center pt-1">
+<button class="inline-flex items-center gap-1.5 text-[13px] text-primary font-semibold py-2 px-3 rounded-xl hover:bg-surface-container active:bg-surface-container-high transition-colors" id="btn-share-link" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span>Generate Co-Parent Summary Link</span>
+</button>
+</div>
+</section>
+<!-- Interactive Feedback Toast (Hidden by default, triggered via JS) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 max-w-[90vw] bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-40" id="action-toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span class="text-[12px] font-medium" id="toast-message">Official court PDF generated successfully.</span>
+</div>
+</div>
+<script>
+  (function() {
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+    let toastTimeout;
+
+    function triggerFeedback(message, iconName) {
+      if (!toast) return;
+      clearTimeout(toastTimeout);
+      toastMsg.textContent = message;
+      toastIcon.textContent = iconName || 'check_circle';
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3200);
+    }
+
+    const btnPdf = document.getElementById('btn-download-pdf');
+    if (btnPdf) {
+      btnPdf.addEventListener('click', () => {
+        triggerFeedback('Compiling Exhibit PDF with 15 verified receipts...', 'download_done');
+      });
+    }
+
+    const btnEmail = document.getElementById('btn-email-lawyer');
+    if (btnEmail) {
+      btnEmail.addEventListener('click', () => {
+        triggerFeedback('Drafted email bundle to Counsel & Mediator.', 'send');
+      });
+    }
+
+    const btnShare = document.getElementById('btn-share-link');
+    if (btnShare) {
+      btnShare.addEventListener('click', () => {
+        triggerFeedback('Read-only audit link copied to clipboard.', 'content_copy');
+      });
+    }
+
+    const periodBtn = document.getElementById('period-picker-btn');
+    if (periodBtn) {
+      periodBtn.addEventListener('click', () => {
+        triggerFeedback('Statement covers full preceding billing cycle (Oct 2024).', 'date_range');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl border-t border-surface-container-high shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="h-pwa-nav-height px-space-sm flex justify-around items-center"><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="expenses-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="text-[11px] font-medium">Expenses</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="scan-slip" href="#"><div class="w-10 h-7 flex items-center justify-center rounded-lg bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[20px] text-primary">document_scanner</span></div><span class="text-[11px] font-semibold text-secondary">Scan Slip</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 transition-colors active:scale-95 text-primary font-bold" data-path="court-reports" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="text-[11px] font-bold">Reports</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant transition-colors active:scale-95" data-path="children-splits" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="text-[11px] font-medium">Children</span></a></div></nav></body></html>

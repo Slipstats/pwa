@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#d7dae3", "on-primary-fixed": "#001b3e", "error": "#ba1a1a", "secondary-fixed-dim": "#aec7f7", "on-tertiary-fixed-variant": "#763400", "outline-variant": "#c1c6d5", "on-error-container": "#93000a", "on-primary-fixed-variant": "#00458d", "on-secondary-fixed-variant": "#2d476f", "on-secondary-container": "#3f5881", "on-tertiary-fixed": "#321200", "primary-container": "#1275e2", "surface-variant": "#e0e2eb", "surface-container-low": "#f1f3fc", "surface-container-high": "#e6e8f1", "tertiary": "#9a4600", "primary": "#005cb8", "on-primary-container": "#000512", "surface-tint": "#005db8", "tertiary-fixed": "#ffdbc9", "surface": "#f9f9ff", "on-surface": "#181c22", "primary-fixed-dim": "#aac7ff", "surface-container": "#ebedf7", "on-primary": "#ffffff", "inverse-surface": "#2d3037", "on-tertiary": "#ffffff", "surface-container-highest": "#e0e2eb", "background": "#f9f9ff", "on-secondary-fixed": "#001b3d", "surface-bright": "#f9f9ff", "secondary": "#465f88", "secondary-fixed": "#d6e3ff", "error-container": "#ffdad6", "on-background": "#181c22", "tertiary-container": "#c05900", "inverse-primary": "#aac7ff", "on-tertiary-container": "#0d0300", "surface-container-lowest": "#ffffff", "primary-fixed": "#d6e3ff", "on-secondary": "#ffffff", "outline": "#717785", "on-error": "#ffffff", "secondary-container": "#b6d0ff", "on-surface-variant": "#414753", "tertiary-fixed-dim": "#ffb68c", "inverse-on-surface": "#eef0fa" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-2xs": "0.25rem", "space-xl": "1.5rem", "space-lg": "1.25rem", "space-sm": "0.75rem", "space-2xl": "2rem", "space-3xl": "2.5rem", "space-md": "1rem", "screen-edge-padding": "1rem", "space-xs": "0.5rem" }, fontFamily: { "headline": ["Inter"], "display": ["Inter"], "body": ["Inter"], "label": ["Inter"] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body text-sm min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-variant/40"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-10 h-10 flex items-center justify-center text-on-surface rounded-full active:bg-surface-container" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Slipstats App Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2CbNIZCTPxeOzUOvL0vnIqn3i2BOMVtt7WmrzmdejLNjkYwzomsd7ou8Xi-pK__pFa0WxEtZRbKBsjud3gnqxZK7rBkuEiYKPEDE00ELsf3nOVmJ2nCwQujx0fJ3kN1b8y9PqmQ1xAL_-PwfmeLvxIlgST4QooS5t2mqEnxHv7lEWyc7MMLc0kSYdT93bFJRe8MiIH0bbUYgvu4D9bJV2o3jmJfDezpNP8Z62eAyMgu03wn7RSDOtw"/><h1 class="font-semibold text-base text-on-surface tracking-tight truncate max-w-[180px]">Manual Expense Entry</h1></div><div class="flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqOn-vNlRadjRqikI_Je5LF_6H824KR1TzFC9DS2QPjxUIUhqxP2kBe_N_8zsg23A4t106QqPYnAJmhL0zdFiw0CAXPN2XWSanqT3BDFyqFB6LzIDmdm56KANMqjMvEjy0nK-QKgUa6F6zBR3_7C9YPD0oWYHNCPNcqG2WJZNHZe1Drvl41lA2gA1z4w2A9pa8-oar_dTA2ZfHs-GG0Uh_3yE2zQuu8lnDVYl4YCSrPGLTomsYTS0DJA"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-space-2xl px-space-md bg-surface"><div class="flex flex-col w-full pb-space-3xl">
+<!-- Interactive Segmented View Control -->
+<div class="w-full bg-surface-container p-1 rounded-xl flex items-center justify-between shadow-sm">
+<button class="flex-1 py-space-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm font-semibold text-sm text-center transition-all" id="tab-manual" type="button">
+      Manual Entry
+    </button>
+<button class="flex-1 py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface font-semibold text-sm text-center transition-all flex items-center justify-center gap-1" id="tab-recurring" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+      Recurring Monthly
+    </button>
+</div>
+<!-- Reassurance Micro-banner -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-secondary-fixed/50 text-on-secondary-fixed flex items-center gap-space-xs border border-secondary-container/40">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-xs font-medium">Logged items adhere to Family Court Exhibit Form 4A standards</span>
+</div>
+<!-- Category Filter Horizontal Scroll -->
+<div class="mt-space-md flex flex-col gap-space-2xs">
+<label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider px-1">Expense Type</label>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar -mx-space-md px-space-md">
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-primary text-on-primary text-xs font-medium flex items-center gap-1.5 shadow-sm transition-all" data-name="Medical Aid / Doctor" type="button">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+        Medical Aid / Doctor
+      </button>
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-surface-container-high text-on-surface text-xs font-medium flex items-center gap-1.5 transition-all" data-name="School &amp; Education" type="button">
+<span class="material-symbols-outlined text-[18px]">school</span>
+        School &amp; Education
+      </button>
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-surface-container-high text-on-surface text-xs font-medium flex items-center gap-1.5 transition-all" data-name="Rent / Child Room" type="button">
+<span class="material-symbols-outlined text-[18px]">cottage</span>
+        Rent / Child Room
+      </button>
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-surface-container-high text-on-surface text-xs font-medium flex items-center gap-1.5 transition-all" data-name="Fuel / Transport" type="button">
+<span class="material-symbols-outlined text-[18px]">local_gas_station</span>
+        Fuel / Transport
+      </button>
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-surface-container-high text-on-surface text-xs font-medium flex items-center gap-1.5 transition-all" data-name="Extramural / Sports" type="button">
+<span class="material-symbols-outlined text-[18px]">sports_soccer</span>
+        Extramural / Sports
+      </button>
+<button class="category-chip shrink-0 px-space-sm py-2 rounded-xl bg-surface-container-high text-on-surface text-xs font-medium flex items-center gap-1.5 transition-all" data-name="Clothing / Other" type="button">
+<span class="material-symbols-outlined text-[18px]">checkroom</span>
+        Clothing / Other
+      </button>
+</div>
+</div>
+<!-- Primary Expense Input Card -->
+<div class="mt-space-md p-space-lg rounded-xl bg-surface-container-low border border-surface-variant/50 shadow-sm flex flex-col gap-space-md">
+<!-- Amount Numeric Display -->
+<div class="flex flex-col gap-1">
+<span class="text-xs font-medium text-on-surface-variant">Claim Amount</span>
+<div class="flex items-baseline justify-between rounded-lg bg-surface-container-lowest p-space-sm border border-outline-variant/40 shadow-inner">
+<div class="flex items-center gap-1">
+<span class="text-2xl text-primary font-bold">R</span>
+<input class="w-48 bg-transparent text-3xl text-on-surface font-bold outline-none tabular-nums tracking-tight" id="expense-amount" placeholder="0.00" step="0.01" type="number" value="850.00"/>
+</div>
+<div class="flex items-center gap-1 px-space-xs py-1 rounded-lg bg-surface-container text-on-surface-variant text-xs uppercase font-semibold">
+          ZAR (R)
+          <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Title / Vendor Input -->
+<div class="flex flex-col gap-1">
+<label class="text-xs font-medium text-on-surface-variant" for="vendor-input">Vendor or Provider Description</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-outline absolute left-space-sm text-[20px]">apartment</span>
+<input class="w-full pl-10 pr-space-sm py-3 rounded-lg bg-surface-container-lowest text-on-surface text-sm border border-outline-variant/40 outline-none focus:border-primary transition-all" id="vendor-input" placeholder="e.g. St. Jude Primary School" type="text" value="Pediatric Specialist &amp; Allergy Consultation"/>
+</div>
+</div>
+<!-- Category & Date Dual Row -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-medium text-on-surface-variant">Sub-Category</label>
+<div class="relative flex items-center rounded-lg bg-surface-container-lowest px-space-sm py-2.5 border border-outline-variant/40 shadow-sm">
+<span class="text-sm text-on-surface truncate">Out-of-Pocket Dr</span>
+<span class="material-symbols-outlined text-outline ml-auto text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-medium text-on-surface-variant">Expense Date</label>
+<div class="relative flex items-center rounded-lg bg-surface-container-lowest px-space-sm py-2.5 border border-outline-variant/40 shadow-sm">
+<span class="material-symbols-outlined text-outline mr-2 text-[18px]">calendar_today</span>
+<span class="text-sm text-on-surface">Today, Oct 24</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Child Allocation Selector -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low border border-surface-variant/50 shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="text-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">family_restroom</span>
+        Child Allocation
+      </span>
+<span class="text-xs text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md font-medium">Per Child Accounting</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs" id="child-allocation-group">
+<!-- Child 1 -->
+<button class="child-pill flex flex-col items-center p-space-sm rounded-lg bg-surface-container-lowest hover:bg-secondary-fixed/40 transition-all text-center gap-1 border border-outline-variant/40 shadow-sm" type="button">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A portrait illustration of a warm and gentle young 8-year-old boy named Liam smiling happily against a soft sea-green backdrop, modern flat design vector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNpqjmJgvQUwrEdUMsxr6Hs-bAXUXVDhOhae6ujTkC979kI5QlHR4lv6lPqOKxrsEnE6tNSF8KA4xtDmnGBPYIe7eKmK4yuZMb1kvq70AaY8xr4Gu10Kvc52kqvn_AsfkQn1uoRxSOUuNfwonuQzfU-UfWMom57Z5WsS2W_MDfz9gZ2dIoy5s3QgOCBQW68sQC2bh0A3IFZWEJbVTZf-SKTisxYbT_oQwswJiUjjWzyCwipyGbtdhlBw"/>
+<span class="text-on-surface font-semibold text-xs leading-none mt-1">Liam</span>
+<span class="text-xs text-on-surface-variant">Sole (100%)</span>
+</button>
+<!-- Child 2 (Selected) -->
+<button class="child-pill flex flex-col items-center p-space-sm rounded-lg bg-primary-container text-on-primary font-bold transition-all text-center gap-1 shadow-md ring-2 ring-primary" type="button">
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="A warm illustrated portrait of a vibrant 6-year-old girl named Maya with playful curls and cheerful brown eyes against a soft mint background, clean modern vector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMnVlm_WcuCnBbov8fd0CFvl3MqPUmpEVMCkXHHMeW-sjN42yAKKrWEu4efKu12qCuLQ1l6LG6bsTnw-QOfwlqPALYslQsNqjzWuRVFPtrHkV5EBoqShI4YRMOL0r-2B_ESICQo3npf9ec3Z2O1p5SuaWoj-k-UTkgDjpvB2XZeWWMfSyL0THNR5eb8uGBS6rvo21adtvdbq2YJ2iO8Dzy6aYwHlEyvkCCZxCKMhuYTGEHAhyiV2B0fg"/>
+<span class="text-on-primary font-semibold text-xs leading-none mt-1">Maya</span>
+<span class="text-xs text-primary-fixed">Sole (100%)</span>
+</button>
+<!-- Both Children Split -->
+<button class="child-pill flex flex-col items-center p-space-sm rounded-lg bg-surface-container-lowest hover:bg-secondary-fixed/40 transition-all text-center gap-1 border border-outline-variant/40 shadow-sm" type="button">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">L</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">M</div>
+</div>
+<span class="text-on-surface font-semibold text-xs leading-none mt-1">Both Kids</span>
+<span class="text-xs text-on-surface-variant">50 / 50 Split</span>
+</button>
+</div>
+</div>
+<!-- Co-Parent Share Ratio Slider Card -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low border border-surface-variant/50 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">balance</span>
+          Reimbursement Ratio
+        </span>
+<span class="text-xs text-on-surface-variant">Default set by Oct 2023 Divorce Decree</span>
+</div>
+<span class="px-2 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed text-xs font-bold">50 / 50 Statutory</span>
+</div>
+<!-- Interactive Visual Proportion Bar -->
+<div class="flex flex-col gap-2">
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex shadow-inner">
+<div class="h-full bg-primary transition-all duration-300" id="mother-bar" style="width: 50%;"></div>
+<div class="h-full bg-secondary transition-all duration-300" id="father-bar" style="width: 50%;"></div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface font-semibold" id="mother-label">You: 50% (R425.00)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-on-surface font-semibold" id="father-label">Father: 50% (R425.00)</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+</div>
+<!-- Quick Ratio Presets -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="ratio-preset flex-1 py-1.5 rounded-lg bg-surface-container text-primary text-xs font-semibold active:scale-95 transition-all" onclick="setRatio(50, 50)" type="button">
+        50 / 50 (Court)
+      </button>
+<button class="ratio-preset flex-1 py-1.5 rounded-lg bg-surface-container text-on-surface-variant text-xs font-medium active:scale-95 transition-all" onclick="setRatio(40, 60)" type="button">
+        60% Father
+      </button>
+<button class="ratio-preset flex-1 py-1.5 rounded-lg bg-surface-container text-on-surface-variant text-xs font-medium active:scale-95 transition-all" onclick="setRatio(0, 100)" type="button">
+        100% Father
+      </button>
+</div>
+</div>
+<!-- Supporting Document / Receipt Attachment -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low border border-surface-variant/50 shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="text-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">attachment</span>
+        Supporting Document
+      </span>
+<span class="text-xs text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+        Legally Timestamped
+      </span>
+</div>
+<!-- Uploaded File Badge/Preview -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-error-container text-error flex flex-col items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+<span class="text-[9px] uppercase font-bold tracking-tighter">PDF</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-semibold text-on-surface truncate">Invoice_Dr_Miller_Pediatric.pdf</span>
+<span class="text-xs text-on-surface-variant">1.4 MB • Uploaded with Hash SHA-256</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button aria-label="Replace File" class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+<button aria-label="Delete File" class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-error active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Court & Co-Parent Statement of Purpose -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low border border-surface-variant/50 shadow-sm flex flex-col gap-space-xs">
+<label class="text-sm text-on-surface font-semibold flex items-center gap-1.5" for="court-note">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+      Court &amp; Co-Parent Ledger Note
+    </label>
+<span class="text-xs text-on-surface-variant">This objective explanation will appear on the unified monthly reimbursement notice.</span>
+<textarea class="mt-1 w-full p-space-sm rounded-lg bg-surface-container-lowest text-on-surface text-sm border border-outline-variant/40 outline-none resize-none focus:border-primary transition-all" id="court-note" rows="3">Prescribed allergy medication and follow-up consultation per Dr. Miller instructions.</textarea>
+</div>
+<!-- Legal Evidentiary Assurance Stamp -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Automatic Record Integrity</span>
+<span class="text-xs text-on-surface-variant">Immutable audit log generated upon submission. Co-parent notified per decree timeline.</span>
+</div>
+</div>
+<!-- Sticky Bottom CTAs -->
+<div class="sticky bottom-0 left-0 right-0 pt-space-md pb-space-sm mt-space-lg bg-surface/95 backdrop-blur-md flex flex-col gap-space-xs border-t border-surface-variant/30">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-semibold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-primary/95 active:scale-[0.99] transition-all" id="save-expense-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+      Save &amp; Request Reimbursement (R425.00)
+    </button>
+<button class="w-full h-11 rounded-xl bg-secondary-fixed text-on-secondary-fixed font-semibold text-sm flex items-center justify-center gap-2 hover:bg-secondary-fixed-dim/60 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+      Save &amp; Add Another Expense
+    </button>
+</div>
+</div>
+<script>
+  // Ratio calculation logic
+  function setRatio(motherPercent, fatherPercent) {
+    const motherBar = document.getElementById('mother-bar');
+    const fatherBar = document.getElementById('father-bar');
+    const motherLabel = document.getElementById('mother-label');
+    const fatherLabel = document.getElementById('father-label');
+    const saveBtn = document.getElementById('save-expense-btn');
+    const amountInput = document.getElementById('expense-amount');
+
+    const total = parseFloat(amountInput.value) || 0;
+    const motherShare = ((total * motherPercent) / 100).toFixed(2);
+    const fatherShare = ((total * fatherPercent) / 100).toFixed(2);
+
+    motherBar.style.width = motherPercent + '%';
+    fatherBar.style.width = fatherPercent + '%';
+
+    motherLabel.textContent = `You: ${motherPercent}% (R${motherShare})`;
+    fatherLabel.textContent = `Father: ${fatherPercent}% (R${fatherShare})`;
+
+    saveBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span> Save &amp; Request Reimbursement (R${fatherShare})`;
+  }
+
+  // Live amount updates
+  document.getElementById('expense-amount').addEventListener('input', function(e) {
+    const total = parseFloat(e.target.value) || 0;
+    const motherBarWidth = parseFloat(document.getElementById('mother-bar').style.width) || 50;
+    const fatherBarWidth = 100 - motherBarWidth;
+    setRatio(motherBarWidth, fatherBarWidth);
+  });
+
+  // Category Chip Selection
+  document.querySelectorAll('.category-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.category-chip').forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+      this.classList.remove('bg-surface-container-high', 'text-on-surface');
+      this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Top Tabs toggle
+  const tabManual = document.getElementById('tab-manual');
+  const tabRecurring = document.getElementById('tab-recurring');
+  tabRecurring.addEventListener('click', () => {
+    tabRecurring.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    tabRecurring.classList.remove('text-on-surface-variant');
+    tabManual.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    tabManual.classList.add('text-on-surface-variant');
+  });
+  tabManual.addEventListener('click', () => {
+    tabManual.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    tabManual.classList.remove('text-on-surface-variant');
+    tabRecurring.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    tabRecurring.classList.add('text-on-surface-variant');
+  });
+</script></main></body></html>

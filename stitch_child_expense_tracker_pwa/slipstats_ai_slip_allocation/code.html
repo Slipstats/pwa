@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-dim": "#d7dae3",
+        "on-primary-fixed": "#001b3e",
+        "error": "#ba1a1a",
+        "secondary-fixed-dim": "#aec7f7",
+        "on-tertiary-fixed-variant": "#763400",
+        "outline-variant": "#c1c6d5",
+        "on-error-container": "#93000a",
+        "on-primary-fixed-variant": "#00458d",
+        "on-secondary-fixed-variant": "#2d476f",
+        "on-secondary-container": "#3f5881",
+        "on-tertiary-fixed": "#321200",
+        "primary-container": "#1275e2",
+        "surface-variant": "#e0e2eb",
+        "surface-container-low": "#f1f3fc",
+        "surface-container-high": "#e6e8f1",
+        "tertiary": "#9a4600",
+        "primary": "#005cb8",
+        "on-primary-container": "#000512",
+        "surface-tint": "#005db8",
+        "tertiary-fixed": "#ffdbc9",
+        "surface": "#f9f9ff",
+        "on-surface": "#181c22",
+        "primary-fixed-dim": "#aac7ff",
+        "surface-container": "#ebedf7",
+        "on-primary": "#ffffff",
+        "inverse-surface": "#2d3037",
+        "on-tertiary": "#ffffff",
+        "surface-container-highest": "#e0e2eb",
+        "background": "#f9f9ff",
+        "on-secondary-fixed": "#001b3d",
+        "surface-bright": "#f9f9ff",
+        "secondary": "#465f88",
+        "secondary-fixed": "#d6e3ff",
+        "error-container": "#ffdad6",
+        "on-background": "#181c22",
+        "tertiary-container": "#c05900",
+        "inverse-primary": "#aac7ff",
+        "on-tertiary-container": "#0d0300",
+        "surface-container-lowest": "#ffffff",
+        "primary-fixed": "#d6e3ff",
+        "on-secondary": "#ffffff",
+        "outline": "#717785",
+        "on-error": "#ffffff",
+        "secondary-container": "#b6d0ff",
+        "on-surface-variant": "#414753",
+        "tertiary-fixed-dim": "#ffb68c",
+        "inverse-on-surface": "#eef0fa"
+      },
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      spacing: {
+        "space-2xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "space-lg": "1.25rem",
+        "pwa-fab-size": "3.5rem",
+        "space-sm": "0.75rem",
+        "space-2xl": "2rem",
+        "pwa-nav-height": "4.5rem",
+        "space-3xl": "2.5rem",
+        "space-md": "1rem",
+        "screen-edge-padding": "1rem",
+        "space-xs": "0.5rem"
+      },
+      fontFamily: {
+        headline: ["Inter", "sans-serif"],
+        display: ["Inter", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        label: ["Inter", "sans-serif"]
+      }
+    }
+  }
+};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body text-[14px] leading-5 min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/60"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Slipstats App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2CbNIZCTPxeOzUOvL0vnIqn3i2BOMVtt7WmrzmdejLNjkYwzomsd7ou8Xi-pK__pFa0WxEtZRbKBsjud3gnqxZK7rBkuEiYKPEDE00ELsf3nOVmJ2nCwQujx0fJ3kN1b8y9PqmQ1xAL_-PwfmeLvxIlgST4QooS5t2mqEnxHv7lEWyc7MMLc0kSYdT93bFJRe8MiIH0bbUYgvu4D9bJV2o3jmJfDezpNP8Z62eAyMgu03wn7RSDOtw"/><div class="flex flex-col"><span class="font-headline text-[17px] font-bold text-primary tracking-tight">Slipstats</span><span class="font-label text-[11px] text-on-surface-variant font-medium">Scan Slip</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-high/80 px-2.5 py-1 rounded-full text-on-surface-variant border border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary mr-1">family_restroom</span><select aria-label="Active child filter" class="bg-transparent font-label text-[12px] text-on-surface font-semibold focus:outline-none pr-1 appearance-none"><option>All Kids</option><option>Liam</option><option>Maya</option></select><span class="material-symbols-outlined text-[14px] text-outline pointer-events-none">expand_more</span></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center text-on-surface-variant rounded-full active:bg-surface-container transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></a></div><div class="relative flex items-center justify-center"><a class="w-10 h-10 flex items-center justify-center rounded-full active:opacity-90 transition-opacity" data-path="children-splits" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqOn-vNlRadjRqikI_Je5LF_6H824KR1TzFC9DS2QPjxUIUhqxP2kBe_N_8zsg23A4t106QqPYnAJmhL0zdFiw0CAXPN2XWSanqT3BDFyqFB6LzIDmdm56KANMqjMvEjy0nK-QKgUa6F6zBR3_7C9YPD0oWYHNCPNcqG2WJZNHZe1Drvl41lA2gA1z4w2A9pa8-oar_dTA2ZfHs-GG0Uh_3yE2zQuu8lnDVYl4YCSrPGLTomsYTS0DJA"/></a></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px)+1rem)] px-space-md bg-surface"><div class="flex flex-col w-full gap-space-md mt-3">
+<!-- Slip Context & Receipt Header Card -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-md border border-outline-variant/50 shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[16px] font-bold text-on-surface truncate">Checkers Hyper</span>
+<span class="font-body text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            14 Oct 2024, 16:42
+          </span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Total Slip</span>
+<span class="font-headline text-[26px] leading-8 text-primary tabular-nums font-bold">R184.60</span>
+</div>
+</div>
+<!-- Scanned Thumbnail Quick-Preview Pill -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-space-sm py-2 border border-outline-variant/30">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label text-[12px] text-on-surface font-semibold">OCR Verification Score</span>
+</div>
+<span class="font-label text-[11px] text-primary font-bold bg-primary-fixed/80 px-2 py-0.5 rounded-full">99.4% Match</span>
+</div>
+</div>
+<!-- AI Smart Recognition Banner -->
+<div class="flex items-start gap-space-sm bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-2xl p-space-md shadow-sm relative overflow-hidden">
+<div class="w-9 h-9 rounded-xl bg-white/20 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label text-[12px] text-primary-fixed font-bold tracking-wide uppercase">AI Smart Allocation</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-pulse"></span>
+</div>
+<p class="font-body text-[13px] text-white/95 leading-snug">
+        Identified <strong class="font-semibold text-white">7 line items</strong>. 4 qualify under Section 7 Support Guidelines.
+      </p>
+<div class="mt-2 inline-flex items-center gap-1 font-label text-[12px] text-primary-fixed bg-white/10 px-2 py-0.5 rounded-md">
+<span class="font-bold text-white">R112.40</span> child-eligible amount detected
+      </div>
+</div>
+</div>
+<!-- Interactive Line Item Breakdown -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline text-[17px] font-bold text-on-surface">Itemized Slip Audit</span>
+<span class="font-label text-[11px] text-on-surface-variant font-medium">Tap item to reallocate</span>
+</div>
+<!-- Line Item 1: Pampers Maya -->
+<div class="line-item-card flex flex-col bg-surface-container-lowest rounded-xl p-space-md gap-space-xs transition-all duration-200 active:scale-[0.99] border border-outline-variant/40 shadow-sm" data-allocated="true">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] font-semibold text-on-surface leading-tight">Pampers Premium Diapers Size 4 (68pk)</span>
+<span class="font-body text-[12px] text-on-surface-variant">Qty: 1 · Barcode 6001002348</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-on-surface font-semibold tabular-nums">R34.99</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">face_3</span>
+<span class="font-label text-[11px] font-semibold">Maya (Age 3)</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label text-[11px] bg-secondary-fixed/50 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+<span>100% Child Expense</span>
+</div>
+</div>
+</div>
+<!-- Line Item 2: Similac Maya -->
+<div class="line-item-card flex flex-col bg-surface-container-lowest rounded-xl p-space-md gap-space-xs transition-all duration-200 active:scale-[0.99] border border-outline-variant/40 shadow-sm" data-allocated="true">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] font-semibold text-on-surface leading-tight">Similac Infant Formula 850g x2</span>
+<span class="font-body text-[12px] text-on-surface-variant">Qty: 2 · Nutrition/Formula</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-on-surface font-semibold tabular-nums">R48.50</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">face_3</span>
+<span class="font-label text-[11px] font-semibold">Maya (Age 3)</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label text-[11px] bg-secondary-fixed/50 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[13px]">child_care</span>
+<span>100% Child Expense</span>
+</div>
+</div>
+</div>
+<!-- Line Item 3: Colgate Split Liam & Maya -->
+<div class="line-item-card flex flex-col bg-surface-container-lowest rounded-xl p-space-md gap-space-xs transition-all duration-200 active:scale-[0.99] border border-outline-variant/40 shadow-sm" data-allocated="true">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] font-semibold text-on-surface leading-tight">Colgate Kids Bubblegum Toothpaste</span>
+<span class="font-body text-[12px] text-on-surface-variant">Qty: 1 · Oral Hygiene</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-on-surface font-semibold tabular-nums">R4.90</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 bg-primary-fixed text-on-primary-fixed-variant px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">call_split</span>
+<span class="font-label text-[11px] font-semibold">Liam &amp; Maya</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label text-[11px] bg-surface-container px-2 py-0.5 rounded-md">
+<span>50/50 Shared (R2.45 each)</span>
+</div>
+</div>
+</div>
+<!-- Line Item 4: Nurofen Liam -->
+<div class="line-item-card flex flex-col bg-surface-container-lowest rounded-xl p-space-md gap-space-xs transition-all duration-200 active:scale-[0.99] border border-outline-variant/40 shadow-sm" data-allocated="true">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] font-semibold text-on-surface leading-tight">Nurofen Children 200ml Strawberry</span>
+<span class="font-body text-[12px] text-on-surface-variant">Qty: 1 · Pharmacy OTC</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-on-surface font-semibold tabular-nums">R24.01</span>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 bg-secondary-fixed text-on-secondary-fixed-variant px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">face_6</span>
+<span class="font-label text-[11px] font-semibold">Liam (Age 7)</span>
+</div>
+<div class="flex items-center gap-1 text-error font-label text-[11px] bg-error-container/60 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[13px]">medical_services</span>
+<span>Medical Category</span>
+</div>
+</div>
+</div>
+<!-- Line Item 5: Espresso Beans (Excluded) -->
+<div class="line-item-card flex flex-col bg-surface-container/50 rounded-xl p-space-md gap-space-xs opacity-60 transition-all duration-200 border border-outline-variant/20" data-allocated="false">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-surface-container-highest text-outline flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] text-on-surface-variant line-through leading-tight">Organic Espresso Beans 500g</span>
+<span class="font-body text-[12px] text-outline">Qty: 1 · Non-qualifying personal item</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-outline font-medium line-through tabular-nums">R18.20</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 bg-surface-container-highest text-outline px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">block</span>
+<span class="font-label text-[11px] font-semibold">Personal / Excluded</span>
+</div>
+<span class="font-label text-[11px] text-outline">Omitted from claim</span>
+</div>
+</div>
+<!-- Line Item 6: Sparkling Water (Excluded) -->
+<div class="line-item-card flex flex-col bg-surface-container/50 rounded-xl p-space-md gap-space-xs opacity-60 transition-all duration-200 border border-outline-variant/20" data-allocated="false">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-surface-container-highest text-outline flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] text-on-surface-variant line-through leading-tight">Sparkling Mineral Water 6pk</span>
+<span class="font-body text-[12px] text-outline">Qty: 1 · Non-qualifying beverage</span>
+</div>
+</div>
+<span class="font-headline text-[15px] text-outline font-medium line-through tabular-nums">R12.00</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 bg-surface-container-highest text-outline px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">block</span>
+<span class="font-label text-[11px] font-semibold">Personal / Excluded</span>
+</div>
+<span class="font-label text-[11px] text-outline">Omitted from claim</span>
+</div>
+</div>
+<!-- Line Item 7: Whole Milk & Bananas Snack -->
+<div class="line-item-card flex flex-col bg-surface-container-lowest rounded-xl p-space-md gap-space-xs transition-all duration-200 active:scale-[0.99] border border-outline-variant/40 shadow-sm" data-allocated="partial">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<button aria-label="Toggle inclusion" class="mt-0.5 w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline text-[14px] font-semibold text-on-surface leading-tight">Whole Milk &amp; Bananas Snack</span>
+<span class="font-body text-[12px] text-on-surface-variant">Qty: 3 · Shared Household Food</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline text-[15px] text-on-surface font-semibold tabular-nums">R42.00</span>
+<span class="font-label text-[11px] text-secondary font-medium">Claiming R29.40</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 bg-secondary-container text-on-secondary-fixed px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">pie_chart</span>
+<span class="font-label text-[11px] font-semibold">70% Kids / 30% Home</span>
+</div>
+<span class="font-label text-[11px] text-primary font-medium cursor-pointer">Adjust Ratio</span>
+</div>
+</div>
+</div>
+<!-- Court-Ready Exhibit Generator Summary Card -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-md gap-space-sm border border-outline-variant/50 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<span class="font-headline text-[16px] font-bold text-on-surface">Legal Split Calculations</span>
+</div>
+<span class="font-label text-[11px] bg-primary-fixed text-on-primary-fixed-variant font-bold px-2 py-0.5 rounded-full">Rule 53 Compliant</span>
+</div>
+<!-- Calculations Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low rounded-xl p-space-sm border border-outline-variant/30">
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded-lg shadow-sm border border-outline-variant/20">
+<span class="font-label text-[11px] text-on-surface-variant font-medium">Child Total Claimable</span>
+<span class="font-headline text-[22px] leading-7 text-on-surface font-bold tabular-nums mt-0.5">R112.40</span>
+<span class="font-label text-[11px] text-secondary font-medium mt-1">4 of 7 Items</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded-lg shadow-sm border border-outline-variant/20">
+<span class="font-label text-[11px] text-on-surface-variant font-medium">Co-Parent Share (50%)</span>
+<span class="font-headline text-[22px] leading-7 text-primary font-bold tabular-nums mt-0.5">R56.20</span>
+<span class="font-label text-[11px] text-primary font-semibold mt-1">Pending Request</span>
+</div>
+</div>
+<!-- Category Distribution Chips -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Expense Categories (Audited)</span>
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-full text-on-surface border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label text-[12px]">Hygiene:</span>
+<span class="font-label text-[12px] font-bold tabular-nums">R37.44</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-full text-on-surface border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label text-[12px]">Food:</span>
+<span class="font-label text-[12px] font-bold tabular-nums">R48.50</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-full text-on-surface border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label text-[12px]">Medical:</span>
+<span class="font-label text-[12px] font-bold tabular-nums">R24.01</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action CTA Stack -->
+<div class="flex flex-col gap-space-xs pt-1 pb-2">
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label text-[14px] font-bold flex items-center justify-center gap-space-xs shadow-sm hover:bg-primary-container transition-all active:scale-[0.98]" id="save-ledger-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Save &amp; Add to Court Ledger</span>
+</button>
+<button class="w-full h-11 bg-surface-container-high text-on-surface rounded-xl font-label text-[13px] font-semibold flex items-center justify-center gap-space-xs border border-outline-variant/50 hover:bg-surface-container-highest transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Retake Photo / Edit Items</span>
+</button>
+</div>
+</div>
+<script>
+  // Interactive micro-interaction for item exclusion/inclusion toggling
+  document.querySelectorAll('.line-item-card button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = button.closest('.line-item-card');
+      const isAllocated = card.dataset.allocated === 'true';
+      
+      if (isAllocated) {
+        card.dataset.allocated = 'false';
+        card.classList.add('opacity-60', 'bg-surface-container/50');
+        card.classList.remove('bg-surface-container-lowest', 'shadow-sm');
+        button.className = 'mt-0.5 w-6 h-6 rounded-md bg-surface-container-highest text-outline flex items-center justify-center shrink-0';
+        button.innerHTML = '<span class="material-symbols-outlined text-[16px]">remove</span>';
+      } else {
+        card.dataset.allocated = 'true';
+        card.classList.remove('opacity-60', 'bg-surface-container/50');
+        card.classList.add('bg-surface-container-lowest', 'shadow-sm');
+        button.className = 'mt-0.5 w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm';
+        button.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>';
+      }
+    });
+  });
+
+  // Simple feedback on save
+  const saveBtn = document.getElementById('save-ledger-btn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const originalHTML = saveBtn.innerHTML;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Generating Legal Record...</span>';
+      setTimeout(() => {
+        saveBtn.classList.remove('bg-primary');
+        saveBtn.classList.add('bg-secondary');
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Recorded in Exhibit File</span>';
+      }, 700);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="h-pwa-nav-height px-space-sm flex justify-around items-center"><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="expenses-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label text-[11px]">Expenses</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 transition-colors active:scale-95 text-primary font-bold" data-path="scan-slip" href="#"><div class="w-10 h-7 flex items-center justify-center rounded-lg bg-primary-fixed text-primary"><span class="material-symbols-outlined text-[20px]">document_scanner</span></div><span class="font-label text-[11px] font-semibold text-primary">Scan Slip</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="court-reports" href="#"><span class="material-symbols-outlined text-[22px]">gavel</span><span class="font-label text-[11px]">Reports</span></a><a class="flex flex-col items-center justify-center w-16 h-12 rounded-xl gap-0.5 text-on-surface-variant hover:text-primary transition-colors active:scale-95" data-path="children-splits" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label text-[11px]">Children</span></a></div></nav></body></html>
