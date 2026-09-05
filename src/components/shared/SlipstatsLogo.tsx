@@ -1,0 +1,80 @@
+import React from "react";
+
+interface SlipstatsLogoProps {
+  className?: string;
+  size?: number;
+}
+
+export const SlipstatsLogo: React.FC<SlipstatsLogoProps> = ({
+  className = "w-9 h-9",
+  size = 36,
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      fill="none"
+      width={size}
+      height={size}
+      className={`flex-shrink-0 ${className}`}
+      aria-label="Slipstats Logo"
+    >
+      {/* Organic Leaf & Caring Crescent Arc */}
+      <path
+        d="M46 20C30 22 18 35 18 52C18 71 34 84 54 84C66 84 76 77 82 68C76 72 68 75 58 75C39 75 27 62 27 47C27 35 34 25 46 20Z"
+        fill="#005cb8"
+      />
+      <path
+        d="M46 20C40 26 36 34 36 44C36 54 41 62 48 67C44 65 40 59 40 51C40 39 44 28 46 20Z"
+        fill="#1275e2"
+      />
+      {/* Caring Hand cradling upward */}
+      <path
+        d="M54 84C66 84 78 76 84 64C86 60 83 55 78 57C72 59 67 62 62 63C55 65 49 62 46 57C44 54 44 51 46 48C48 45 51 45 54 47C57 49 61 48 62 45C60 42 55 41 51 41C42 41 36 48 36 56C36 67 44 78 54 84Z"
+        fill="#005cb8"
+      />
+      {/* Financial Document / Till Slip with Header & Stat Line */}
+      <rect
+        x="46"
+        y="24"
+        width="28"
+        height="34"
+        rx="3"
+        stroke="#005cb8"
+        strokeWidth="4"
+        strokeLinecap="round"
+        fill="none"
+      />
+      {/* Lines */}
+      <line
+        x1="53"
+        y1="31"
+        x2="67"
+        y2="31"
+        stroke="#005cb8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="53"
+        y1="36"
+        x2="61"
+        y2="36"
+        stroke="#005cb8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      {/* Statistical Trend Line with Data Nodes */}
+      <polyline
+        points="52,48 58,42 67,46"
+        stroke="#1275e2"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="52" cy="48" r="2.5" fill="#005cb8" />
+      <circle cx="58" cy="42" r="2.5" fill="#005cb8" />
+      <circle cx="67" cy="46" r="2.5" fill="#005cb8" />
+    </svg>
+  );
+};

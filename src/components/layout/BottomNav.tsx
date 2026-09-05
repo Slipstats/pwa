@@ -9,8 +9,8 @@ export const BottomNav: React.FC = () => {
 
   const navItems = [
     {
-      href: "/expenses",
-      match: ["/", "/expenses"],
+      href: "/dashboard",
+      match: ["/dashboard", "/expenses"],
       label: "Expenses",
       icon: "receipt_long",
     },

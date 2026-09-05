@@ -1,3 +1,3 @@
-import DashboardPage from "../page";
+import DashboardPage from "@/app/dashboard/page";
 
 export default DashboardPage;

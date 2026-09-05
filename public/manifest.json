@@ -2,7 +2,7 @@
   "name": "Slipstats: Child Expense Tracker",
   "short_name": "Slipstats",
   "description": "Court-Ready Child Expense & Till Slip Allocation Tracker for Mothers",
-  "start_url": "/",
+  "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#f9f9ff",
   "theme_color": "#005cb8",

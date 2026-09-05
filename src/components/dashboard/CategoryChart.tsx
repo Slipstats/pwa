@@ -1,13 +1,27 @@
 import React from "react";
 
-export const CategoryChart: React.FC = () => {
-  const categories = [
-    { name: "Tuition", percentage: 42, color: "bg-primary" },
-    { name: "Medical", percentage: 26, color: "bg-secondary" },
-    { name: "Hygiene", percentage: 18, color: "bg-tertiary-container" },
-    { name: "Transit", percentage: 9, color: "bg-primary-fixed-dim" },
-    { name: "Other", percentage: 5, color: "bg-outline-variant" },
-  ];
+export interface CategoryShareItem {
+  name: string;
+  percentage: number;
+  color: string;
+}
+
+interface CategoryChartProps {
+  categories?: CategoryShareItem[];
+}
+
+const DEFAULT_CATEGORIES: CategoryShareItem[] = [
+  { name: "Tuition", percentage: 42, color: "bg-primary" },
+  { name: "Medical", percentage: 26, color: "bg-secondary" },
+  { name: "Hygiene", percentage: 18, color: "bg-tertiary-container" },
+  { name: "Transit", percentage: 9, color: "bg-primary-fixed-dim" },
+  { name: "Other", percentage: 5, color: "bg-outline-variant" },
+];
+
+export const CategoryChart: React.FC<CategoryChartProps> = ({
+  categories = DEFAULT_CATEGORIES,
+}) => {
+  const displayCats = categories.length > 0 ? categories : DEFAULT_CATEGORIES;
 
   return (
     <div className="flex flex-col p-space-md rounded-2xl bg-surface-container-low border border-outline-variant/30 shadow-sm gap-space-xs">
@@ -25,7 +39,7 @@ export const CategoryChart: React.FC = () => {
 
       {/* Multi-segment progress bar */}
       <div className="w-full h-3 rounded-lg overflow-hidden flex bg-surface-container-highest mt-1">
-        {categories.map((cat) => (
+        {displayCats.map((cat) => (
           <div
             key={cat.name}
             className={`h-full ${cat.color} transition-all duration-500`}
@@ -37,7 +51,7 @@ export const CategoryChart: React.FC = () => {
 
       {/* Legend Items */}
       <div className="grid grid-cols-3 gap-y-1.5 gap-x-2 pt-2">
-        {categories.map((cat) => (
+        {displayCats.map((cat) => (
           <div key={cat.name} className="flex items-center gap-1.5 min-w-0">
             <span className={`w-2.5 h-2.5 rounded-sm ${cat.color} flex-shrink-0`} />
             <span className="font-label text-label-sm text-on-surface truncate">

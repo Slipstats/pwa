@@ -2,6 +2,7 @@
 const CACHE_NAME = "slipstats-cache-v1";
 const STATIC_ASSETS = [
   "/",
+  "/dashboard",
   "/manifest.json",
   "/images/logo.png",
   "/images/mother_avatar.png"

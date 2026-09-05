@@ -2,39 +2,56 @@ import React from "react";
 import Image from "next/image";
 import { formatCurrency } from "@/lib/utils";
 
-export const ChildSpendCard: React.FC = () => {
-  const cards = [
-    {
-      id: "liam",
-      name: "Liam",
-      meta: "Age 7 • Grade 2",
-      total: 1620.0,
-      description: "School tuition, soccer gear, pediatric allergy prescription",
-      coParentShare: 810.0,
-      avatar:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDV4Z1uMBbUw8xJc-Gnuy9IP1DrvyQRRLkN43RMhpnp6M7iIpg6UvYMzc-0sQ6albpPdQYsGpGrKJydKbd1bcv_eOmyhWc1221BvrlOAMhhxWyuYyF51Gndbnmzmv2Xu8V-h8N4kkKLse95GST3V0hK_yBHbS9NubuB9XdnIWtx1ncd_yB6oaIXXQ5vufSxekKEPwY26Agh50vJuyO5fdOHQ0KhtJAGKossL-pgfobaUTxJ-ia7hOhNxw",
-      badgeColor: "bg-primary-fixed",
-    },
-    {
-      id: "maya",
-      name: "Maya",
-      meta: "Age 3 • Nursery",
-      total: 1225.5,
-      description: "Toddler formula, size 4 diapers, nursery fees, winter boots",
-      coParentShare: 612.75,
-      avatar:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBM7gJ34RP-Ddp9XI1q8kj8MHT-uqz0iWZm54NSLj5uVjxyYIAdlBhck6G5KBtD1umxIQ-UNJ5EWaEEHB2Xbvf1ChbwGr29qEYerrTNrsYA7fEaPQ5x-BGMRG440G4iiVPGPpVB_7p-uXna2ep-kLkSOvR9mWxnqCKhT8RiZ03hNkVam28vbFPJFxjqb8fWH_ETdubdLiwAu55s1zb_VRhkYRUGORa_OusWaxcfbSNceLwLhcFK8KJnKw",
-      badgeColor: "bg-tertiary-fixed",
-    },
-  ];
+export interface ChildCardItem {
+  id: string;
+  name: string;
+  meta: string;
+  total: number;
+  description: string;
+  coParentShare: number;
+  avatar: string;
+  badgeColor: string;
+}
 
+interface ChildSpendCardProps {
+  cards?: ChildCardItem[];
+}
+
+const DEFAULT_CARDS: ChildCardItem[] = [
+  {
+    id: "liam",
+    name: "Liam",
+    meta: "Age 7 • Grade 2",
+    total: 1620.0,
+    description: "School tuition, soccer gear, pediatric allergy prescription",
+    coParentShare: 810.0,
+    avatar:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDV4Z1uMBbUw8xJc-Gnuy9IP1DrvyQRRLkN43RMhpnp6M7iIpg6UvYMzc-0sQ6albpPdQYsGpGrKJydKbd1bcv_eOmyhWc1221BvrlOAMhhxWyuYyF51Gndbnmzmv2Xu8V-h8N4kkKLse95GST3V0hK_yBHbS9NubuB9XdnIWtx1ncd_yB6oaIXXQ5vufSxekKEPwY26Agh50vJuyO5fdOHQ0KhtJAGKossL-pgfobaUTxJ-ia7hOhNxw",
+    badgeColor: "bg-primary-fixed",
+  },
+  {
+    id: "maya",
+    name: "Maya",
+    meta: "Age 3 • Nursery",
+    total: 1225.5,
+    description: "Toddler formula, size 4 diapers, nursery fees, winter boots",
+    coParentShare: 612.75,
+    avatar:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBM7gJ34RP-Ddp9XI1q8kj8MHT-uqz0iWZm54NSLj5uVjxyYIAdlBhck6G5KBtD1umxIQ-UNJ5EWaEEHB2Xbvf1ChbwGr29qEYerrTNrsYA7fEaPQ5x-BGMRG440G4iiVPGPpVB_7p-uXna2ep-kLkSOvR9mWxnqCKhT8RiZ03hNkVam28vbFPJFxjqb8fWH_ETdubdLiwAu55s1zb_VRhkYRUGORa_OusWaxcfbSNceLwLhcFK8KJnKw",
+    badgeColor: "bg-tertiary-fixed",
+  },
+];
+
+export const ChildSpendCard: React.FC<ChildSpendCardProps> = ({ cards = DEFAULT_CARDS }) => {
   return (
     <div className="flex flex-col gap-space-xs">
       <div className="flex items-center justify-between px-space-2xs">
         <span className="font-headline text-headline-sm text-on-surface font-bold">
           Child Spend Allocation
         </span>
-        <span className="font-label text-label-sm text-on-surface-variant">2 Beneficiaries</span>
+        <span className="font-label text-label-sm text-on-surface-variant">
+          {cards.length} Beneficiaries
+        </span>
       </div>
 
       <div className="grid grid-cols-2 gap-space-sm">

@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { AppHeader } from "@/components/layout/AppHeader";
-import { BottomNav } from "@/components/layout/BottomNav";
+import { AppShell } from "@/components/layout/AppShell";
+import { AuthProvider } from "@/context/AuthContext";
+import { LedgerProvider } from "@/context/LedgerContext";
 
 export const metadata: Metadata = {
   title: "Slipstats — Court-Ready Child Expense & Till Slip Tracker",
@@ -48,26 +49,28 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
-        <AppHeader />
-        <main className="flex-1 w-full max-w-xl md:max-w-4xl lg:max-w-5xl mx-auto pt-16 md:pt-20 pb-28 md:pb-12 px-4 md:px-6">
-          {children}
-        </main>
-        <BottomNav />
+        <AuthProvider>
+          <LedgerProvider>
+            <AppShell>{children}</AppShell>
+          </LedgerProvider>
+        </AuthProvider>
 
-        {/* PWA Service Worker Registration */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').catch(function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
+        {/* PWA Service Worker Registration - Production Only */}
+        {process.env.NODE_ENV === "production" && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').catch(function(err) {
+                      console.log('ServiceWorker registration failed: ', err);
+                    });
                   });
-                });
-              }
-            `,
-          }}
-        />
+                }
+              `,
+            }}
+          />
+        )}
       </body>
     </html>
   );

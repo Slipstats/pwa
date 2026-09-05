@@ -1,27 +1,34 @@
+import { createBrowserClient } from "@supabase/ssr";
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder-project.supabase.co";
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-anon-key";
 
-let supabaseClient: SupabaseClient | null = null;
+let clientInstance: SupabaseClient | null = null;
 
 export function getSupabaseClient(): SupabaseClient {
-  if (!supabaseClient) {
-    supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-      },
-    });
+  if (!clientInstance) {
+    if (typeof window !== "undefined" && isSupabaseConfigured()) {
+      clientInstance = createBrowserClient(supabaseUrl, supabaseAnonKey);
+    } else {
+      clientInstance = createClient(supabaseUrl, supabaseAnonKey, {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+        },
+      });
+    }
   }
-  return supabaseClient;
+  return clientInstance;
 }
 
 export const isSupabaseConfigured = (): boolean => {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   return (
-    Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL) &&
-    !process.env.NEXT_PUBLIC_SUPABASE_URL?.includes("placeholder-project") &&
-    Boolean(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) &&
-    !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.includes("placeholder-anon-key")
+    Boolean(url) &&
+    !url?.includes("placeholder-project") &&
+    Boolean(key) &&
+    !key?.includes("placeholder-anon-key")
   );
 };
